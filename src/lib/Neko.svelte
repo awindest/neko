@@ -101,7 +101,7 @@
 
 	let backgroundPosition = $state('160px 32px')
 
-	function onMouseMove(event: MouseEvent) {
+	function onPointerMove(event: PointerEvent) {
 		mousePos.X = event.clientX // runes; have to use an object to modify values of an import.
 		mousePos.Y = event.clientY
 	}
@@ -222,11 +222,11 @@
 	$effect(() => {
 		isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-		document.addEventListener('mousemove', onMouseMove)
+		document.addEventListener('pointermove', onPointerMove)
 		const animationFrameHandle = window.requestAnimationFrame(onAnimationFrame)
 
 		return () => {
-			document.removeEventListener('mousemove', onMouseMove)
+			document.removeEventListener('pointermove', onPointerMove)
 			window.cancelAnimationFrame(animationFrameHandle)
 		}
 	})

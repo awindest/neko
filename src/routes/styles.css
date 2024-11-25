@@ -1,0 +1,8 @@
+html,
+html:hover {
+    cursor: none;
+}
+
+body {
+    overflow: hidden;
+}

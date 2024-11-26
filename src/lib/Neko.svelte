@@ -245,8 +245,8 @@
 		height: 32px;
 		position: fixed;
 		pointer-events: none;
+		user-select: none;
 		image-rendering: pixelated;
-		z-index: 9999;
 		background-image: url($lib/images/oneko.gif);
 	}
 </style>

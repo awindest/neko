@@ -1,6 +1,7 @@
 html,
 html:hover {
     cursor: none;
+    pointer-events: none;
 }
 
 body {
